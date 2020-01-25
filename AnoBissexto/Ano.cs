@@ -13,33 +13,24 @@ namespace AnoBissexto
 
         }
 
-        public string CalcularAno(int numero)
+        public string CalcularAno(int ano)
         {
-            if (numero % 4 == 0)
+            if (ano % 4 == 0 && ano % 100 != 0)
             {
-                if (numero % 100 == 0)
-                {
-                    string ebissexto = "O ANO É BISSEXTO";
-                    return ebissexto;
-                }
-                else{
-                    string ebissexto = "O ANO É BISSEXTO";
-                    return ebissexto;
-                }
-
-
+                string ebissexto = "O ANO É BISSEXTO";
+                return ebissexto;
             }
-            else if (numero % 400 == 0)
+            else if (ano % 400 == 0)
             {
-                string naoebissextou = "O ANO NAO É BISSEXTO";
-                return naoebissextou;
+                string ebissexto = "O ANO É BISSEXTO";
+                return ebissexto;
             }
             else {
                 string naoebissexto = "O ANO NAO É BISSEXTO";
                 return naoebissexto;
             }
-
            
+
         }
     }
 }
